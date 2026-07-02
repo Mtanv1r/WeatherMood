@@ -9,10 +9,11 @@ input.addEventListener('click',(e)=>{
         alert('please enter your city name');
     }
     else{
-        fetch('https:api.openweathermap.org/data/2.5/weather?q=${searchValue},{state code},{country code}&appid={e3664bf39d1fb15328dce55e6b7aa8cf}')
+        fetch('https:api.openweathermap.org/data/2.5/weather?q=${searchValue},{state code},{country code}&appid={my api key}')
         //i enter api key 
         //send openWeather server to give me data
         .then((res)=>res.json())
+        // data is a js object sent by api 
         .then((data)=> {
             showDataOnUi(data);
              input.value="";
@@ -30,9 +31,16 @@ input.addEventListener('click',(e)=>{
                 //const weatherSituation=data.weatherSituation;
                 const weatherSituation=data.weather[0].main;
                 const icon=data.icon[0];
-                // developers get these variable from data object
-                const html=""
-
+                // developers get these variable from data object"
+                const html=`        const html='<div class="result-div-inner">
+        <img src="" alt="">
+        <h2>${location}l</h2>
+        <h3>${temperature}</h3>
+        <h3>${weatherSituation}</h3>
+    </div>'
+            }
+        }` 
+        document.getElementById("result-div").innerHTML=html;
             }
         }
      
