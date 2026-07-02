@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>kodeForest</title>
+</head>
+<body>
+    <main>
+        <section class="main-section">
+            <div class="search-div">
+                <div class="title">
+                    <h2>Weather Mood</h2>
+                </div>
+                <form > 
+                    <div class="form-group">
+                        <input type="text" placeholder="enter your city" autocomplete="off" spellcheck="false" id="searchInput">
+                        <button id="submit-btn" class="submit-btn">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="result-div" id="result-div">
+                
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- this is for js part  -->
+    <div class="result-div-inner">
+        <img src="" alt="">
+        <h2>${location}l</h2>
+        <h3>${temperature}</h3>
+        <h3>${weatherSituation}</h3>
+    </div>
